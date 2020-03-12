@@ -1,5 +1,0 @@
-config:
-  name: "msa.label live"
-  servers:
-    - localhost:3333
-    - localhost:3334
