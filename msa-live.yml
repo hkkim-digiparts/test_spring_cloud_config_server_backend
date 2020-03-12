@@ -1,6 +1,6 @@
 config:
-  name: test
+  name: live
   servers:
-    - localhost:1111
-    - localhost:1112
+    - localhost:2221
+    - localhost:2222
 
