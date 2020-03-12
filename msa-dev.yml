@@ -1,0 +1,5 @@
+config:
+  name: dev
+  servers:
+    - localhost:1111
+    - localhost:1112
