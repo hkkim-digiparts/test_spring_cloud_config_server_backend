@@ -1,0 +1,5 @@
+config:
+  name: test-application dev.yml
+  servers:
+	- localhost:0001
+	- localhost:0002
