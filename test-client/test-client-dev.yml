@@ -1,0 +1,5 @@
+config:
+  name: test-client
+  servers:
+    - localhost:1111111
+    - localhost:11121111
