@@ -1,5 +1,5 @@
 config:
-  name: dev-rabbit1
+  name: dev-222222
   servers:
     - localhost-rabbit:1111
     - localhost-rabbit:1112
