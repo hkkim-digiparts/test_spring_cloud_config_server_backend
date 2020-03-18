@@ -4,8 +4,29 @@ config:
     - localhost-rabbit:1111
     - localhost-rabbit:1112
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+server:
+  port: 10001
+
+spring:
+  application:
+    name: msa
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888, http://localhost:8890
+      fail-fast: true
+  kafka:
+    bootstrap-servers: http://192.168.56.103:9092
+
+logging:
+  pattern:
+    console: "[%d{yyyy-mm-dd HH:mm:ss.SSS}] %magenta([%thread]) %highlight([%level]) [%logger{36}.%M:%L]- %msg%n"
+    file: "[%d{yyyy-mm-dd HH:mm:ss.SSS}] [%thread] [%level] [%logger{36}.%M:%L]- %msg%n"
+  level:
+    org.springframework.web: ERROR
+    com.digiparts: DEBUG
+  file:
+    path: /service/otoplug/log/config-server/config-server.log
+    max-history: 31
+    max-size: 500MB
