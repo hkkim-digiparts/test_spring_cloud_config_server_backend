@@ -3,3 +3,21 @@ config:
   servers:
     - localhost-rabbit:1111
     - localhost-rabbit:1112
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  pattern:
+    console: "[%d{yyyy-mm-dd HH:mm:ss.SSS}] %magenta([%thread]) %highlight([%level]) [%logger{36}.%M:%L]- %msg%n"
+    file: "[%d{yyyy-mm-dd HH:mm:ss.SSS}] [%thread] [%level] [%logger{36}.%M:%L]- %msg%n"
+  level:
+    org.springframework.web: ERROR
+    com.digiparts: DEBUG
+  file:
+    path: /service/otoplug/log/config-server/config-server.log
+    max-history: 31
+    max-size: 500MB
