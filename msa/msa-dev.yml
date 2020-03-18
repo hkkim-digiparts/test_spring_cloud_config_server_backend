@@ -1,5 +1,5 @@
 config:
-  name: DEV-KAFKA
+  name: DEV-KAFKA2222
   servers:
     - localhost-rabbit:1111
     - localhost-rabbit:1112
